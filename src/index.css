@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated img {    
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);    
+	animation: border-transform 10s linear infinite alternate forwards;    
+	border-radius: 100%;
+}
+
+/* Keyframes for the border-radius transformation */
+@keyframes border-transform {    
+	0%, 100% {        
+		border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;    
+	}    
+	14% {        
+		border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;    
+	}    
+	28% {        
+		border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;    
+	}    
+	42% {        
+		border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;    
+	}    
+	56% {        
+		border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;    
+	}    
+	70% {        
+		border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;    
+	}    
+	84% {        
+		border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;    
+	}
+}
+
+/* Sticky header background color */
+[data-scroll-listener="true"] #sinatra-header-inner {    
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* styles.css */
+
+.playwrite-cl-title {
+    font-family: "Playwrite CL", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-condensed-heading {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .playwrite-pe-subtitle {
+    font-family: "Playwrite PE", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .playwrite-cu-caption {
+    font-family: "Playwrite CU", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .cta {
+	display: inline-block;
+	padding: 7px 21px;
+	color: white;
+	background-color: goldenrod;
+	border: 2px solid goldenrod;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: goldenrod;
+	background-color: transparent;
+}
+
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+	animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: goldenrod;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 2.5s;}
+
+	@keyframes text_reveal_box {
+		50% {
+			width: 100%;
+			left: 0;
+		}
+		100% {
+			width: 0;
+			left: 100%;
+		}
+	}
+	@keyframes text_reveal {
+		100% {
+			color: rgb(124, 123, 119);
+		}
+	}
+	@keyframes text_reveal_name {
+		100% {
+			color: goldenrod;
+		}
+	}
+	/* End Keyframes */
