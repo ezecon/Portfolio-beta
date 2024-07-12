@@ -202,121 +202,93 @@
 	animation: rotate 2s infinite linear;
 	animation-delay: calc(0.01s * var(--index));
   }
+  /*-------------------------------------------*/
+  /* CSS animation */
+@keyframes rotatex {
+	0% {
+	  transform: rotateX(0deg);
+	}
+	50% {
+	  transform: rotateX(360deg);
+	}
+	100% {
+	  transform: rotateX(360deg);
+	}
+  }
   
+  /* Apply animation to each character */
+  #rotating-p {
+	display: inline-block;
+  }
   
+  #rotating-p span {
+	display: inline-block;
+	animation: rotatex 1s infinite linear;
+	animation-delay: calc(0.001s * var(--index));
+  }
+  #rotating-p2 {
+	display: inline-block;
+  }
+  
+  #rotating-p2 span {
+	display: inline-block;
+	animation: rotatex 1s infinite linear;
+	animation-delay: calc(0.001s * var(--index));
+  }
+  
+/*This portion for project*/
 
 
-
-.banner{
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+.slider{
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 10% 90%,
+      transparent
+  );
 }
-.banner .slider{
-    position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 20s linear infinite;
-    z-index: 2;
+.slider .list{
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+.slider .list .item{
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  transition: filter 0.5s;
+  animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+}
+.slider .list .item img{
+  width: 100%;
 }
 @keyframes autoRun{
-    from{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-    }to{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-    }
+  from{
+      left: 100%;
+  }to{
+      left: calc(var(--width) * -1);
+  }
 }
-
-.banner .slider .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(550px);
+.slider:hover .item{
+  animation-play-state: paused!important;
+  filter: grayscale(1);
 }
-.banner .slider .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.slider .item:hover{
+  filter: grayscale(0);
 }
-.banner .content{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1400px, 100vw);
-    height: max-content;
-    padding-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+.slider[reverse="true"] .item{
+  animation: reversePlay 10s linear infinite;
 }
-.banner .content h1{
-    font-size: 3em;
-    line-height: 1em;
-    color: goldenrod;
-    position: relative;
-}
-
-.banner .content .author{
-    font-family: Poppins;
-    text-align: right;
-    max-width: 200px;
-}
-.banner .content h2{
-    font-size: 3em;
-}
-.banner .content .model{
-    background-image: url(images/model.png);
-    width: 100%;
-    height: 75vh;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-size: auto 130%;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 1;
-}
-@media screen and (max-width: 1023px) {
-    .banner .slider{
-        width: 160px;
-        height: 200px;
-        left: calc(50% - 80px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
-    }
-    .banner .content h1{
-        text-align: center;
-        width: 100%;
-        text-shadow: 0 10px 20px #dbd947;
-        font-size: 2em;
-    }
-
-}
-@media screen and (max-width: 767px) {
-    .banner .slider{
-        width: 100px;
-        height: 150px;
-        left: calc(50% - 50px);
-    }
-    .banner .slider .item{
-        transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(180px);
-    }
-    .banner .content h1{
-        font-size: 1em;
-    }
+@keyframes reversePlay{
+  from{
+      left: calc(var(--width) * -1);
+  }to{
+      left: 100%;
+  }
 }

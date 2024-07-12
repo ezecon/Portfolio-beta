@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import Cards from "./Cards.jsx/Cards";
+import Web from "./Web";
+import Programming from "./Programming";
+import Machine from "./Machine";
 
 
 
@@ -23,7 +25,9 @@ export default function Skill() {
         <p className=" text-sm">My Technical Knowledge</p>
        </div>
         <div>
-           <Cards/>
+           <Web/>
+           <Programming/>
+           <Machine/>
         </div>
     </div>
   )
