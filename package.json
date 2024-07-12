@@ -1,36 +1,28 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "particles.js",
+  "version": "2.0.0",
+  "description": "A lightweight JavaScript library for creating particles",
+  "homepage": "http://vincentgarreau.com/particles.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@heroicons/react": "^2.1.5",
-    "@material-tailwind/react": "^2.1.9",
-    "flowbite-react": "^0.10.1",
-    "framer-motion": "^11.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "react-router-dom": "^6.24.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VincentGarreau/particles.js.git"
   },
-  "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "daisyui": "^4.12.10",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1"
-  }
+  "keywords": [
+    "particles",
+    "particle",
+    "canvas"
+  ],
+  "author": "Vincent Garreau",
+  "license": "MIT",
+  "files": [
+    "particles.js",
+    "particles.min.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/VincentGarreau/particles.js/issues"
+  },
+  "homepage": "https://github.com/VincentGarreau/particles.js"
 }
