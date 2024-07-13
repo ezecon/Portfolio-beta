@@ -8,6 +8,34 @@
 	border-radius: 100%;
 }
 
+.animated-text{
+	line-height: 1;
+	font-size: "Playwrite CL";
+	background-clip: text;
+	--webkit-baclground-clip: text;
+	color: transparent;
+	background-image: linear-gradient(45deg, goldenrod, blue, goldenrod);
+	background-size: 400% 400%;
+	animation: animate 5s ease infinite;
+}
+@keyframes animate{
+	0%{
+		background-position: 0 0;
+	}
+	25%{
+		background-position: 100% 0;
+	}
+	50%{
+		background-position: 100% 100%;
+	}
+	75%{
+		background-position: 0 100%;
+	}
+	100%{
+		background-position: 0 0;
+	}
+}
+
 /* Keyframes for the border-radius transformation */
 @keyframes border-transform {    
 	0%, 100% {        

@@ -59,7 +59,7 @@ export default function About() {
             <div className="timeline-end timeline-box  bg-white text-[goldenrod] border-[goldenrod]">
                 
                 <h2 className="roboto-condensed-heading">Noakhali Govt. College</h2>
-                <p>GPA: 4.08 out of 4.00</p>
+                <p>GPA: 4.08 out of 5.00</p>
                 <p>2017-2019</p>
                 </div>
             <hr />
@@ -69,7 +69,7 @@ export default function About() {
             <div className="timeline-start timeline-box  bg-white text-[goldenrod] border-[goldenrod]">
                 
                 <h2 className="roboto-condensed-heading">Brother Andres High School</h2>
-                <p>GPA: 4.41 out of 6.00</p>
+                <p>GPA: 4.41 out of 5.00</p>
                 <p>2006-2017</p>
                 </div>
             <div className="timeline-middle">

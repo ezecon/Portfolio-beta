@@ -15,7 +15,7 @@ export default function HeroSection() {
   };
   return (
    <div>
-     <div className="mt-6 md:mt-10 flex justify-center items-center gap-3 text-3xl text-[goldenrod]">
+     <div className="mt-6 md:mt-10 flex justify-center items-center gap-3 text-3xl text-[goldenrod] ">
       <a href="https://github.com/ezecon"><FaGithub /></a>
       <a href="https://www.linkedin.com/in/ezecon/"><FaLinkedin /></a>
       <a href="https://codeforces.com/profile/H3XU5"><SiCodeforces /></a>
@@ -44,7 +44,7 @@ export default function HeroSection() {
             <div>
               <h1>Hello, <span></span></h1>
               <h1>My Name is <span></span></h1>
-              <h1 className="roboto-condensed-heading">Econozzaman<span></span></h1>
+              <h1 className="roboto-condensed-heading ">Econozzaman<span></span></h1>
               <a href="" onClick={handleDownload} className="cta rounded inline-block mt-6 md:mt-10 py-2 px-6 text-lg md:text-xl">My Resume</a>
             </div>
           </div>
