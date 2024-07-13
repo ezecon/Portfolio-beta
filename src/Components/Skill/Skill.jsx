@@ -23,7 +23,7 @@ export default function Skill() {
         </h1>
         <p className="text-sm md:text-base">My Technical Knowledge</p>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-4 md:space-y-0 md:space-x-4">
+      <div className="flex flex-col md:flex-row items-center justify-center  md:space-y-0 md:space-x-4">
         <Web />
         <Programming />
         <Machine />

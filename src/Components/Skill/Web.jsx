@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { MdOutlineVerified } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function Web() {
   useEffect(() => {
@@ -14,9 +15,12 @@ export default function Web() {
   }, []);
 
   return (
-    <div className="text-center text-3xl mt-20 text-[goldenrod]">
-      <div className="bg-white border-2 rounded-lg shadow-lg p-4 w-full max-w-sm mx-auto" style={{ borderColor: 'goldenrod' }}>
-        <p className="text-lg md:text-xl font-semibold" id="rotating-p">WEB DEVELOPMENT</p>
+    <div className="text-center text-3xl mt-20 text-[goldenrod] ">
+              <motion.button
+                whileHover={{ scale: 1.5 }}
+                whileTap={{ scale: 0.9 }}
+                className="border border-[goldenrod] rounded py-10 px-8"
+              >
         <ul className="list-none text-left pl-6 space-y-2">
           {["HTML", "CSS", "BOOTSTRAP", "REACT", "TAILWIND CSS", "JAVASCRIPT", "NODE JS", "EXPRESS JS", "MONGODB", "SQL"].map(lang => (
             <li key={lang} className="flex items-center text-sm md:text-base">
@@ -24,7 +28,7 @@ export default function Web() {
             </li>
           ))}
         </ul>
-      </div>
+          </motion.button>
     </div>
   );
 }

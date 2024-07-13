@@ -65,6 +65,11 @@ export default function Project() {
                 title: "Weather ForeCasting",
                 description: "It is a small e-commerce website",
               },
+              {
+                img: "https://i.ibb.co/vxDRt24/Whats-App-Image-2024-07-13-at-17-45-10.jpg",
+                title: "Econ Book Shop Management System",
+                description: "A C# Project",
+              },
             ].map((project, index) => (
               <motion.button
                 whileHover={{ scale: 1.9 }}
