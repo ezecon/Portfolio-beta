@@ -2,15 +2,25 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { SiCodeforces, SiHackerrank, SiLeetcode } from "react-icons/si";
 
+
 export default function HeroSection() {
+  const handleDownload = () => {
+    const fileUrl = './res.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'downloaded-file.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
    <div>
      <div className="mt-6 md:mt-10 flex justify-center items-center gap-3 text-3xl text-[goldenrod]">
-      <FaGithub />
-      <FaLinkedin />
-      <SiCodeforces />
-      <SiHackerrank />
-      <SiLeetcode />
+      <a href="https://github.com/ezecon"><FaGithub /></a>
+      <a href="https://www.linkedin.com/in/ezecon/"><FaLinkedin /></a>
+      <a href="https://codeforces.com/profile/H3XU5"><SiCodeforces /></a>
+      <a href="https://www.hackerrank.com/profile/ezecon"><SiHackerrank /></a>
+      <a href=""><SiLeetcode /></a>
     </div>
 
       
@@ -35,7 +45,7 @@ export default function HeroSection() {
               <h1>Hello, <span></span></h1>
               <h1>My Name is <span></span></h1>
               <h1 className="roboto-condensed-heading">Econozzaman<span></span></h1>
-              <a href="https://drive.google.com/drive/u/0/folders/1LjtpvFG3M3qibEA2qxjpxjZi8OycWjwu" className="cta rounded inline-block mt-6 md:mt-10 py-2 px-6 text-lg md:text-xl">My Resume</a>
+              <a href="" onClick={handleDownload} className="cta rounded inline-block mt-6 md:mt-10 py-2 px-6 text-lg md:text-xl">My Resume</a>
             </div>
           </div>
         </section>

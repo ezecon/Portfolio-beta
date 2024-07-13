@@ -23,7 +23,7 @@ export default function Project() {
 
   return (
     <div>
-      <div className="px-4 md:px-8 lg:px-16">
+      <div className="px-4 py-36 md:px-8 lg:px-16">
         <div className="text-center text-3xl mt-20 text-[goldenrod]">
           <h1 id="rotating-text1" className="text-2xl md:text-3xl lg:text-4xl">
             PROJECTS
@@ -31,7 +31,7 @@ export default function Project() {
           <p className="text-sm md:text-base">My Works</p>
         </div>
         <div className="flex items-center justify-center mt-4 space-y-4 md:space-y-0 md:space-x-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               {
                 img: "https://i.ibb.co/16PXC3t/Whats-App-Image-2024-07-13-at-10-22-24.jpg",
@@ -70,6 +70,21 @@ export default function Project() {
                 title: "Econ Book Shop Management System",
                 description: "A C# Project",
               },
+              {
+                img: "https://i.ibb.co/whwdfPn/Whats-App-Image-2024-07-13-at-20-16-30.jpg",
+                title: "Free Thought",
+                description: "A project like sujood.co",
+              },
+              {
+                img: "https://i.ibb.co/M5qBXV8/Whats-App-Image-2024-07-13-at-20-18-43.jpg",
+                title: "SOFIEEE",
+                description: "Website of an restaurant",
+              },
+              {
+                img: "https://i.ibb.co/Wp2V5Dx/Whats-App-Image-2024-07-13-at-20-21-12.jpg",
+                title: "HexoConverter",
+                description: "Here you can convert .docx to .pdf",
+              },
             ].map((project, index) => (
               <motion.button
                 whileHover={{ scale: 1.9 }}
@@ -77,7 +92,7 @@ export default function Project() {
                 key={index}
                 onClick={handleOpen}
               >
-                <div className="card bg-base-100 w-96 shadow-xl bg-slate-100 shadow-[goldenrod] rounded">
+                <div className="card  w-96 shadow-xl bg-slate-100 shadow-[goldenrod] rounded">
                   <figure className="p-4 rounded">
                     <img src={project.img} alt={project.title} />
                   </figure>
@@ -93,7 +108,7 @@ export default function Project() {
                       <div className="text-xl text-[goldenrod]">
                         {project.link ? (
                           <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Button>Details</Button>
+                            <Button className=" text-[goldenrod]">Details</Button>
                           </a>
                         ) : (
                           <Button>Details</Button>
@@ -122,3 +137,4 @@ export default function Project() {
     </div>
   );
 }
+

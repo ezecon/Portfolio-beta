@@ -15,12 +15,12 @@ export default function Machine() {
   }, []);
 
   return (
-    <div className="text-center text-3xl mt-20 text-[goldenrod] ">
+    <div className="text-center text-3xl mt-20 md:pt-24 text-[goldenrod] ">
         
           <motion.button
                 whileHover={{ scale: 1.5 }}
                 whileTap={{ scale: 0.9 }}
-                className="border border-[goldenrod] rounded py-28 px-10"
+                className="border border-[goldenrod] rounded py-28 px-10 bg-white"
               >
                 <ul className="list-none text-left pl-6 space-y-2">
                   {["C", "C++", "C#", "PHP", "JAVASCRIPT", "PYTHON"].map(lang => (

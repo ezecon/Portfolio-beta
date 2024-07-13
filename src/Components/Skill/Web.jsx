@@ -19,7 +19,7 @@ export default function Web() {
               <motion.button
                 whileHover={{ scale: 1.5 }}
                 whileTap={{ scale: 0.9 }}
-                className="border border-[goldenrod] rounded py-10 px-8"
+                className="border border-[goldenrod] rounded py-10 px-8 bg-white"
               >
         <ul className="list-none text-left pl-6 space-y-2">
           {["HTML", "CSS", "BOOTSTRAP", "REACT", "TAILWIND CSS", "JAVASCRIPT", "NODE JS", "EXPRESS JS", "MONGODB", "SQL"].map(lang => (

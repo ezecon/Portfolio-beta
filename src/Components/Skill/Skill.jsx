@@ -16,7 +16,7 @@ export default function Skill() {
   }, []);
 
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="px-4 py-24 md:px-8 lg:px-16">
       <div className="text-center text-3xl mt-20 text-[goldenrod]">
         <h1 id="rotating-text" className="text-2xl md:text-3xl lg:text-4xl">
           SKILLS
