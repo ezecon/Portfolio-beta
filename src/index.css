@@ -202,6 +202,15 @@
 	animation: rotate 2s infinite linear;
 	animation-delay: calc(0.01s * var(--index));
   }
+  #rotating-text1 {
+	display: inline-block;
+  }
+  
+  #rotating-text1 span {
+	display: inline-block;
+	animation: rotate 2s infinite linear;
+	animation-delay: calc(0.01s * var(--index));
+  }
   /*-------------------------------------------*/
   /* CSS animation */
 @keyframes rotatex {
@@ -235,53 +244,3 @@
 	animation: rotatex 1s infinite linear;
 	animation-delay: calc(0.001s * var(--index));
   }
-  
-/* Particles.js Integration Styles */
-
-/* Disable pointer events on the background to allow interaction with particles */
-#bg {
-	pointer-events: none;
-}
-
-/* Style and position the particles container */
-#particles-js {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 2;
-}
-
-/* Ensure elements before the background have higher z-index */
-#bg:before {
-	z-index: 3;
-}
-
-/* Disable pointer events on the wrapper */
-#wrapper {
-	pointer-events: none;
-}
-
-/* Enable pointer events on particles container, icons, navigation, and footer paragraphs */
-#particles-js,
-ul.icons,
-#header nav ul,
-#footer p {
-	pointer-events: auto;
-	user-select: none; /* Prevent user text selection */
-}
-
-/* Allow text selection on footer paragraphs on hover or focus for better accessibility */
-#footer p:hover,
-#footer p:focus,
-#header .inner:hover,
-#header .inner:focus {
-	user-select: auto;
-}
-
-/* Enable pointer events on the main content area */
-#main {
-	pointer-events: auto;
-}
-
