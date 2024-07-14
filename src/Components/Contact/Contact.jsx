@@ -34,8 +34,8 @@ export default function Contact() {
                         <div className="w-12">
                           <img src="https://img.icons8.com/bubbles/100/000000/phone.png" alt="Phone Icon" />
                         </div>
-                        <div className="contact-info ml-4">
-                          <h2 className="text-sm md:text-lg leading-6 font-medium">+880 1533798331</h2>
+                        <div className="contact-info  ml-4">
+                          <h2 className="text-sm md:text-lg leading-6 font-medium">+880 1533798331</h2>  
                           <h2 className="text-sm md:text-lg leading-6 font-medium">+880 1310043179</h2>
                         </div>
                       </div>
