@@ -5,7 +5,7 @@ import { SiCodeforces, SiHackerrank, SiLeetcode } from "react-icons/si";
 
 export default function HeroSection() {
   const handleDownload = () => {
-    const fileUrl = './res.pdf';
+    const fileUrl = 'https://github.com/ezecon/Portfolio/blob/main/res.pdf';
     const link = document.createElement('a');
     link.href = fileUrl;
     link.download = 'downloaded-file.pdf';

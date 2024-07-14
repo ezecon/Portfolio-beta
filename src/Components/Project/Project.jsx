@@ -87,12 +87,12 @@ export default function Project() {
               },
             ].map((project, index) => (
               <motion.button
-                whileHover={{ scale: 1.1 }} /* Adjusted hover scale */
+                whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
                 key={index}
                 onClick={handleOpen}
               >
-                <div className="card w-full sm:w-80 md:w-96 shadow-xl bg-slate-100 shadow-[goldenrod] rounded">
+                <div className="card  w-96 shadow-xl bg-slate-100 shadow-[goldenrod] rounded">
                   <figure className="p-4 rounded">
                     <img src={project.img} alt={project.title} />
                   </figure>
@@ -101,14 +101,14 @@ export default function Project() {
                       {project.title}
                     </h2>
                     <p>{project.description}</p>
-                    <div className="flex justify-end pr-4 pb-4 gap-3">
+                    <div className="flex justify-end pr-4 pb-4">
                       <div className="text-3xl text-[goldenrod]">
                         <CgDetailsMore />
                       </div>
                       <div className="text-xl text-[goldenrod]">
                         {project.link ? (
                           <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Button className="text-[goldenrod]">Details</Button>
+                            <Button className=" text-[goldenrod]">Details</Button>
                           </a>
                         ) : (
                           <Button>Details</Button>
