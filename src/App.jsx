@@ -18,7 +18,7 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className='bg-none'>
       <div className="navbar  flex flex-wrap justify-between items-center px-4 py-2">
         <div className="flex-1 water-text text-center relative md:left-[-28rem]">
           <h2 className="font-bold sm:text-lg md:text-2xl">ECONOZZAMAN</h2>

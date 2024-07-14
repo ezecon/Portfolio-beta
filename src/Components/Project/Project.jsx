@@ -5,7 +5,7 @@ import { Button, Dialog, DialogBody, DialogHeader } from "@material-tailwind/rea
 
 export default function Project() {
   useEffect(() => {
-    const textContainer = document.getElementById('rotating-text1');
+    const textContainer = document.getElementById('rotating-text9');
     if (textContainer) {
       const text = textContainer.innerText;
       const chars = text.split('');
@@ -25,7 +25,7 @@ export default function Project() {
     <div>
       <div className="px-4 py-36 md:px-8 lg:px-16">
         <div className="text-center mt-20 text-[goldenrod]">
-          <h1 id="rotating-text1" className="text-2xl md:text-3xl lg:text-4xl">
+          <h1 id="rotating-text9" className="text-2xl md:text-3xl lg:text-4xl">
             PROJECTS
           </h1>
           <p className="text-sm md:text-base">My Works</p>

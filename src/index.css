@@ -271,6 +271,24 @@
 	animation: rotate 2s infinite linear;
 	animation-delay: calc(0.01s * var(--index));
   }
+  #rotating-text9 {
+	display: inline-block;
+  }
+  
+  #rotating-text9 span {
+	display: inline-block;
+	animation: rotate 2s infinite linear;
+	animation-delay: calc(0.01s * var(--index));
+  }
+  #rotating-text13 {
+	display: inline-block;
+  }
+  
+  #rotating-text13 span {
+	display: inline-block;
+	animation: rotate 2s infinite linear;
+	animation-delay: calc(0.01s * var(--index));
+  }
   /*-------------------------------------------*/
   /* CSS animation */
 @keyframes rotatex {
