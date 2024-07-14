@@ -23,7 +23,7 @@ export default function About() {
             <div className="flex items-center justify-center mt-4 space-y-4 md:space-y-0 md:space-x-4">
                 <ul className="timeline timeline-vertical">
         <li>
-            <div className="timeline-start timeline-box bg-white text-[goldenrod] border-[goldenrod]">
+            <div className="timeline-start timeline-box bg-none text-[goldenrod] border-[goldenrod]">
                 <h2 className="roboto-condensed-heading">Bangladesh Army International University of Science & Technology</h2>
                 <p>CGPA: 3.92 out of 4.00</p>
                 <p>2020-2024</p>
@@ -56,7 +56,7 @@ export default function About() {
                 clipRule="evenodd" />
             </svg>
             </div>
-            <div className="timeline-end timeline-box  bg-white text-[goldenrod] border-[goldenrod]">
+            <div className="timeline-end timeline-box  bg-none text-[goldenrod] border-[goldenrod]">
                 
                 <h2 className="roboto-condensed-heading">Noakhali Govt. College</h2>
                 <p>GPA: 4.08 out of 5.00</p>
@@ -66,7 +66,7 @@ export default function About() {
         </li>
         <li>
             <hr />
-            <div className="timeline-start timeline-box  bg-white text-[goldenrod] border-[goldenrod]">
+            <div className="timeline-start timeline-box  bg-none text-[goldenrod] border-[goldenrod]">
                 
                 <h2 className="roboto-condensed-heading">Brother Andres High School</h2>
                 <p>GPA: 4.41 out of 5.00</p>
