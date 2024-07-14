@@ -87,12 +87,12 @@ export default function Project() {
               },
             ].map((project, index) => (
               <motion.button
-                whileHover={{ scale: 1.3 }}
+                whileHover={{ scale: 1.1 }} // Reduced the scale for better responsiveness
                 whileTap={{ scale: 0.9 }}
                 key={index}
                 onClick={handleOpen}
               >
-                <div className="card  w-96 shadow-xl bg-slate-100 shadow-[goldenrod] rounded">
+                <div className="card w-full sm:w-80 shadow-xl bg-slate-100 shadow-[goldenrod] rounded"> {/* Adjusted width */}
                   <figure className="p-4 rounded">
                     <img src={project.img} alt={project.title} />
                   </figure>
@@ -108,7 +108,7 @@ export default function Project() {
                       <div className="text-xl text-[goldenrod]">
                         {project.link ? (
                           <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <Button className=" text-[goldenrod]">Details</Button>
+                            <Button className="text-[goldenrod]">Details</Button>
                           </a>
                         ) : (
                           <Button>Details</Button>
