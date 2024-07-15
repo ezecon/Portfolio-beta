@@ -23,7 +23,7 @@ export default function Machine() {
                 className="border border-[goldenrod] rounded py-28 px-10 bg-none"
               >
                 <ul className="list-none text-left pl-6 space-y-2">
-                  {["C", "C++", "C#", "PHP", "JAVASCRIPT", "PYTHON"].map(lang => (
+                  {["Pandas", "Keras", "OpenCV", "Tensorflow", "Scikit-learn", "PYTHON"].map(lang => (
                     <li key={lang} className="flex items-center text-sm md:text-base">
                       <MdOutlineVerified className="text-goldenrod mr-2" /> {lang}
                     </li>
