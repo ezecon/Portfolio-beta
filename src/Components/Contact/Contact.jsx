@@ -1,6 +1,38 @@
-import { useEffect } from "react";
+import  { useEffect, useState } from "react";
+import emailjs from 'emailjs-com';
+import toast from "react-hot-toast";
 
 export default function Contact() {
+  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      'service_cg57hsm',
+      'template_3oz23w3',
+      {
+        message: message,
+        user_email: email,
+        user_name: name,
+      },
+      'HPOXU5yUUILTLU-HM'
+    )
+    .then((response) => {
+      console.log('Email sent successfully!', response.status, response.text);
+      toast.success("Message Sent!");
+    })
+    .catch((err) => {
+      console.error('Failed to send email. Error:', err);
+    });
+
+    setMessage('');
+    setEmail('');
+    setName('');
+  };
+
   useEffect(() => {
     const textContainer = document.getElementById('rotating-text13');
     if (textContainer) {
@@ -64,7 +96,7 @@ export default function Contact() {
 
               <div className="text-[goldenrod]">
                 <h2 className="text-lg md:text-xl font-semibold mb-4">Write me your project</h2>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={sendEmail}>
                   <div>
                     <label htmlFor="name" className="block">Name</label>
                     <input
@@ -72,6 +104,8 @@ export default function Contact() {
                       id="name"
                       placeholder="Insert your name"
                       className="w-full p-2 md:p-3 border border-[goldenrod] bg-transparent rounded-lg"
+                      value={name} 
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div>
@@ -81,6 +115,8 @@ export default function Contact() {
                       id="email"
                       placeholder="Insert your email"
                       className="w-full p-2 md:p-3 border border-[goldenrod] bg-transparent rounded-lg"
+                      value={email} 
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div>
@@ -90,6 +126,8 @@ export default function Contact() {
                       placeholder="Write your project"
                       className="w-full p-2 md:p-3 border border-[goldenrod] bg-transparent rounded-lg"
                       rows="4"
+                      value={message} 
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
                   <button type="submit" className="w-full p-2 md:p-3 bg-transparent border border-[goldenrod] text-[goldenrod] rounded-lg shadow-md hover:bg-[goldenrod] hover:text-white flex items-center justify-center space-x-2">
