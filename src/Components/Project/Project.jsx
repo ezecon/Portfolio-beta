@@ -85,6 +85,11 @@ export default function Project() {
                 title: "HexoConverter",
                 description: "Here you can convert .docx to .pdf",
               },
+              {
+                img: "https://i.ibb.co/8gKPqbJ/737d76a5-2033-43c1-a984-e4d5229b89d8.jpg",
+                title: "IFF",
+                description: "Website of Islamia Football Federation",
+              },
             ].map((project, index) => (
               <motion.button
                 whileHover={{ scale: 1.1 }} // Reduced the scale for better responsiveness

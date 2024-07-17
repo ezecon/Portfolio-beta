@@ -21,8 +21,9 @@ export default function Contact() {
       'HPOXU5yUUILTLU-HM'
     )
     .then((response) => {
-      console.log('Email sent successfully!', response.status, response.text);
+      
       toast.success("Message Sent!");
+      console.log('Email sent successfully!', response.status, response.text);
     })
     .catch((err) => {
       console.error('Failed to send email. Error:', err);
