@@ -15,7 +15,7 @@ export default function Machine() {
   }, []);
 
   return (
-    <div className="text-center text-3xl mt-20 md:pt-24 text-[goldenrod] ">
+    <div className="text-center text-3xl mt-24 md:pt-28 text-[goldenrod] ">
         
           <motion.button
                 whileHover={{ scale: 1.5 }}

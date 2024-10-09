@@ -4,15 +4,7 @@ import { SiCodeforces, SiHackerrank, SiLeetcode } from "react-icons/si";
 
 
 export default function HeroSection() {
-  const handleDownload = () => {
-    const fileUrl = 'https://github.com/ezecon/Portfolio/blob/main/res.pdf';
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = 'downloaded-file.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
   return (
    <div>
      <div className="mt-6 md:mt-10 flex justify-center items-center gap-3 text-3xl text-[goldenrod] ">
@@ -45,7 +37,7 @@ export default function HeroSection() {
               <h1>Hello, <span></span></h1>
               <h1>My Name is <span></span></h1>
               <h1 className="roboto-condensed-heading ">Econozzaman<span></span></h1>
-              <a href="" onClick={handleDownload} className="cta rounded inline-block mt-6 md:mt-10 py-2 px-6 text-lg md:text-xl">My Resume</a>
+              <a href="resume.pdf" download className="cta rounded inline-block mt-6 md:mt-10 py-2 px-6 text-lg md:text-xl">My Resume</a>
             </div>
           </div>
         </section>

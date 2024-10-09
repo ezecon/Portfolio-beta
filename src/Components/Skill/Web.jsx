@@ -22,7 +22,7 @@ export default function Web() {
                 className="border border-[goldenrod] rounded py-10 px-8 bg-none"
               >
         <ul className="list-none text-left pl-6 space-y-2">
-          {["HTML", "CSS", "BOOTSTRAP", "REACT", "TAILWIND CSS", "JAVASCRIPT", "NODE JS", "EXPRESS JS", "MONGODB", "SQL"].map(lang => (
+          {["HTML", "CSS", "BOOTSTRAP", "REACT", "TAILWIND CSS", "JAVASCRIPT", "NODE JS", "EXPRESS JS","Django", "MONGODB", "SQL"].map(lang => (
             <li key={lang} className="flex items-center text-sm md:text-base">
               <MdOutlineVerified className="text-goldenrod mr-2" /> {lang}
             </li>
